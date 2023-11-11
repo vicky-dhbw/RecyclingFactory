@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "org.sonarqube" version "4.2.1.3168"
 }
 
 group 'org.recycling'
@@ -7,6 +8,13 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+}
+
+sonar {
+    properties {
+        property "sonar.projectKey", "Recycling-Factory-Code-Analysis"
+        property "sonar.projectName", "Recycling Factory Code Analysis"
+    }
 }
 
 dependencies {
