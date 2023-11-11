@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.recycling'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'io.cucumber', name: 'cucumber-core', version: '7.11.1'
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.11.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.11.1'
+    testImplementation 'org.junit.vintage:junit-vintage-engine'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine'
+    testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '5.0.0'
+}
+
+test {
+    useJUnitPlatform()
+}
