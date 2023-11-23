@@ -1,6 +1,8 @@
 plugins {
     id 'java'
     id "org.sonarqube" version "4.2.1.3168"
+    id("org.owasp.dependencycheck") version "7.0.3"
+    id 'checkstyle'
 }
 
 group 'org.recycling'
@@ -29,4 +31,10 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+checkstyle {
+    toolVersion = '8.45'
+    configFile = rootProject.file('checkstyle.xml')
+    ignoreFailures = false
 }
