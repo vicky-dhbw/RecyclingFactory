@@ -14,7 +14,7 @@ public class App {
         recyclingFactory.getControlRoom().setWorker(worker);
         recyclingFactory.installSensors();
 
-        Configuration.INSTANCE.setNumberOfRecyclablesOnConveyor(5000);
+        Configuration.INSTANCE.setNumberOfRecyclablesOnConveyor(5000); //just a comment
 
         recyclingFactory.getConveyor().setRecyclables(RecyclablesGenerator.generateRandomPaperRecyclables());
         recyclingFactory.startConveyor();
