@@ -41,12 +41,13 @@ jobs:
           ./gradlew build sonar --info --stacktrace
           ./gradlew checkstyleMain
           ./gradlew dependencyCheckAnalyze
-      - name: Upload HTML report
+      - name: Upload Dependency Check HTML report
         uses: actions/upload-artifact@v2
         with:
           name: Dependency-Check-Report
-          path: |
-            ./build/reports/dependency-check-report.html
-            ./build/reports/checkstyle/main.html
-      - name: List report files
-        run: ls -l ./build/reports/checkstyle/
+          path: ./build/reports/dependency-check-report.html
+      - name: Upload Checkstyle Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: Checkstyle-Report
+          path: ./build/reports/checkstyle/main.html
