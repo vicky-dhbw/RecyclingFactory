@@ -47,3 +47,4 @@ jobs:
           name: Dependency-Check-Report
           path: |
             ./build/reports/dependency-check-report.html
+            ./build/reports/checkstyle/main.html
